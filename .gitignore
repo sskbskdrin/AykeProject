@@ -1,0 +1,11 @@
+#.gradle
+#.idea
+#/build
+#/AykeDemo/.settings
+#/AykeDemo/bin
+#/AykeDemo/build
+#/AykeDemo/gen
+#/AykeLibrary/.settings
+#/AykeLibrary/bin
+#/AykeLibrary/build
+#/AykeLibrary/gen

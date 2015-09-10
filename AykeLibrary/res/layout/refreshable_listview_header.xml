@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/refreshable_list_header_layout"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:gravity="bottom">
+
+    <RelativeLayout
+        android:id="@+id/refreshable_list_header_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/refreshable_list_header_text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/refreshable_list_header_hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/refreshable_list_header_hint_normal"/>
+
+            <TextView
+                android:id="@+id/refreshable_list_header_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/refreshable_list_header_last_time"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/refreshable_list_header_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/refreshable_list_header_text_layout"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/refreshable_list_view_arrow"/>
+
+        <ProgressBar
+            android:id="@+id/refreshable_list_header_progressbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/refreshable_list_header_text_layout"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+</LinearLayout>

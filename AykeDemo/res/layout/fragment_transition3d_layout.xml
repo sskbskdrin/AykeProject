@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <View
+        android:id="@+id/picture0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/viewpager_item0" />
+
+    <View
+        android:id="@+id/picture1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/viewpager_item1" />
+
+</FrameLayout>

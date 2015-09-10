@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ayke.demo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/group1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.ayke.library.togglebutton.ToggleButton
+            android:layout_width="54dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:borderWidth="2dp"
+            app:offBorderColor="#000"
+            app:offColor="#ddd"
+            app:onColor="#f00"
+            app:spotColor="#00f" />
+
+        <com.ayke.library.togglebutton.ToggleButton
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp" />
+
+        <com.ayke.library.togglebutton.SwitchButton
+            android:id="@+id/sb_one_key_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.ayke.library.widget.Switcher
+        android:id="@+id/switcher0"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_margin="5dip"
+        android:background="@drawable/frame"
+        app:decreaseButton="@drawable/arrow_left"
+        app:idleTimeout="6000"
+        app:increaseButton="@drawable/arrow_right" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <com.ayke.library.widget.SmoothButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/silver_button"
+            android:text="smooth button 3"
+            app:transitionDrawable="@drawable/silver_transition_list"
+            app:transitionDrawableLength="8" />
+    </LinearLayout>
+
+</LinearLayout>

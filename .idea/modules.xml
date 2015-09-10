@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AykeDemo/AykeDemo.iml" filepath="$PROJECT_DIR$/AykeDemo/AykeDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AykeLibrary/AykeLibrary.iml" filepath="$PROJECT_DIR$/AykeLibrary/AykeLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AykeProject.iml" filepath="$PROJECT_DIR$/AykeProject.iml" />
+    </modules>
+  </component>
+</project>

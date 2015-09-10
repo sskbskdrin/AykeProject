@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ayke.demo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <com.ayke.library.wheel.WheelHorizontalView
+        android:id="@+id/hour_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:selectionDividerWidth="1dp"
+        app:visibleItems="4" />
+
+    <com.ayke.library.wheel.WheelHorizontalView
+        android:id="@+id/mins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:visibleItems="5" />
+
+    <com.ayke.library.wheel.WheelVerticalView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:selectionDividerActiveAlpha="100"
+        app:selectionDividerDimmedAlpha="255"
+        app:selectionDividerHeight="1dp"
+        app:visibleItems="5" />
+
+    <com.ayke.library.wheel.WheelHorizontalView
+        android:id="@+id/ampm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
