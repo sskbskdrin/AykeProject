@@ -36,21 +36,19 @@
         android:orientation="horizontal"
         android:padding="5dp" >
 
-        <TextView
+        <Button
             android:id="@+id/buttonA"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:background="@android:drawable/btn_default"
             android:textColor="@android:color/darker_gray"
             android:textSize="24sp" />
 
-        <TextView
+        <Button
             android:id="@+id/buttonB"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:background="@android:drawable/btn_default"
             android:textColor="@android:color/darker_gray"
             android:textSize="24sp" />
     </LinearLayout>

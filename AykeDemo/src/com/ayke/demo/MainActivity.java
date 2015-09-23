@@ -1,196 +1,106 @@
 package com.ayke.demo;
 
-import java.text.Collator;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
+import android.view.View;
+import android.widget.AdapterView;
+
+import com.ayke.demo.common.SampleListFragment;
+import com.ayke.demo.slidingmenu.MenuPropertyFragment;
+import com.ayke.library.abstracts.IFragment;
+import com.ayke.library.slidingmenu.SlidingFragmentActivity;
+import com.ayke.library.slidingmenu.SlidingMenu;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-import android.app.ListActivity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import com.ayke.demo.common.CommonFragmentActivity;
-
-public class MainActivity extends ListActivity {
+public class MainActivity extends SlidingFragmentActivity implements AdapterView.OnItemClickListener {
+	private SlidingMenu mSlidingMenu;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-		Intent intent = getIntent();
-		String path = intent.getStringExtra("com.mydemos.Path");
-		Log.i("MainActivity", "onCreate");
-
-		if (path == null) {
-			path = "";
-		}
-
-		// setListAdapter(new SimpleAdapter(this, getData(path),
-		// android.R.layout.simple_list_item_1, new String[] { "title" },
-		// new int[] { android.R.id.text1 }));
-		// getListView().setTextFilterEnabled(true);
-		List<ClassItem> list = ReadPropertiesUtil.getActivityList();
-		list.addAll(ReadPropertiesUtil.getFragmentList());
-		setListAdapter(new ListAdapter(this, list));
+		setContentView(R.layout.activity_main);
+		mSlidingMenu = getSlidingMenu();
+		mSlidingMenu.setShadowWidthRes(R.dimen.shadow_width);
+		mSlidingMenu.setShadowDrawable(R.drawable.slidingmenu_left_shadow);
+		mSlidingMenu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		mSlidingMenu.setFadeDegree(0.35f);
+		mSlidingMenu.setMode(SlidingMenu.LEFT_RIGHT);
+		mSlidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		initLeftMenu();
+		initRightMenu();
+		changeMainView(new MenuPropertyFragment());
 	}
 
-	protected List<Map<String, Object>> getData(String prefix) {
-		List<Map<String, Object>> myData = new ArrayList<Map<String, Object>>();
-
-		Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-		mainIntent.addCategory("myCateGory");
-
-		PackageManager pm = getPackageManager();
-		List<ResolveInfo> list = pm.queryIntentActivities(mainIntent, 0);
-
-		if (null == list)
-			return myData;
-
-		String[] prefixPath;
-		String prefixWithSlash = prefix;
-
-		if (prefix.equals("")) {
-			prefixPath = null;
-		} else {
-			prefixPath = prefix.split("/");
-			prefixWithSlash = prefix + "/";
-		}
-
-		int len = list.size();
-
-		Map<String, Boolean> entries = new HashMap<String, Boolean>();
-
-		for (int i = 0; i < len; i++) {
-			ResolveInfo info = list.get(i);
-			CharSequence labelSeq = info.loadLabel(pm);
-			String label = labelSeq != null ? labelSeq.toString()
-					: info.activityInfo.name;
-
-			if (prefixWithSlash.length() == 0
-					|| label.startsWith(prefixWithSlash)) {
-
-				String[] labelPath = label.split("/");
-
-				String nextLabel = prefixPath == null ? labelPath[0]
-						: labelPath[prefixPath.length];
-
-				if ((prefixPath != null ? prefixPath.length : 0) == labelPath.length - 1) {
-					addItem(myData,
-							nextLabel,
-							activityIntent(
-									info.activityInfo.applicationInfo.packageName,
-									info.activityInfo.name));
-				} else {
-					if (entries.get(nextLabel) == null) {
-						addItem(myData, nextLabel,
-								browseIntent(prefix.equals("") ? nextLabel
-										: prefix + "/" + nextLabel));
-						entries.put(nextLabel, true);
-					}
-				}
-			}
-		}
-
-		Collections.sort(myData, sDisplayNameComparator);
-
-		return myData;
+	private void initLeftMenu() {
+		setBehindContentView(R.layout.activity_slidingmenu_left);
+		FragmentTransaction t = getSupportFragmentManager()
+				.beginTransaction();
+		SampleListFragment fragment = new SampleListFragment();
+		ArrayList<ClassItem> mLeftList = ReadPropertiesUtil.getFragmentList();
+		Collections.sort(mLeftList, mComparator);
+		Bundle bundle = new Bundle();
+		bundle.putSerializable(SampleListFragment.LIST_DATA, mLeftList);
+		fragment.setArguments(bundle);
+		fragment.setOnItemClickListener(this);
+		t.replace(R.id.menu_frame, fragment);
+		t.commit();
 	}
 
-	private final static Comparator<Map<String, Object>> sDisplayNameComparator = new Comparator<Map<String, Object>>() {
-		private final Collator collator = Collator.getInstance();
+	private void initRightMenu() {
+		mSlidingMenu.setSecondaryMenu(R.layout
+				.activity_slidingmenu_right);
+		FragmentTransaction t = getSupportFragmentManager()
+				.beginTransaction();
+		SampleListFragment fragment = new SampleListFragment();
+		ArrayList<ClassItem> mRightList = ReadPropertiesUtil.getActivityList();
+		Collections.sort(mRightList, mComparator);
+		Bundle bundle = new Bundle();
+		bundle.putSerializable(SampleListFragment.LIST_DATA, mRightList);
+		fragment.setArguments(bundle);
+		fragment.setOnItemClickListener(this);
+		t.replace(R.id.menu_frame_two, fragment);
+		t.commit();
+	}
 
-		public int compare(Map<String, Object> map1, Map<String, Object> map2) {
-			return collator.compare(map1.get("title"), map2.get("title"));
+	private Comparator<ClassItem> mComparator = new Comparator<ClassItem>() {
+		@Override
+		public int compare(ClassItem lhs, ClassItem rhs) {
+			return lhs.getText().compareToIgnoreCase(rhs.getText());
 		}
 	};
 
-	protected Intent activityIntent(String pkg, String componentName) {
-		Intent result = new Intent();
-		result.setClassName(pkg, componentName);
-		return result;
-	}
-
-	protected Intent browseIntent(String path) {
-		Intent result = new Intent();
-		result.setClass(this, MainActivity.class);
-		result.putExtra("com.mydemos.Path", path);
-		return result;
-	}
-
-	protected void addItem(List<Map<String, Object>> data, String name,
-			Intent intent) {
-		Map<String, Object> temp = new HashMap<String, Object>();
-		temp.put("title", name);
-		temp.put("intent", intent);
-		data.add(temp);
-	}
-
 	@Override
-	protected void onListItemClick(ListView l, View v, int position, long id) {
-		// Map<String, Object> map = (Map<String, Object>) l
-		// .getItemAtPosition(position);
-
-		// Intent intent = (Intent) map.get("intent");
-		ClassItem item = (ClassItem) l.getAdapter().getItem(position);
-		Intent intent = new Intent();
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		ClassItem item = (ClassItem) parent.getAdapter().getItem(position);
 		if (item.isActivity()) {
+			Intent intent = new Intent();
 			intent.setClassName(this, item.getClassName());
+			startActivity(intent);
 		} else {
-			intent.putExtra("fragment", item.getClassName());
-			intent.setClass(this, CommonFragmentActivity.class);
+			try {
+				IFragment fragment = (IFragment) Class.forName(item.getClassName())
+						.newInstance();
+				changeMainView(fragment);
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
-		startActivity(intent);
 	}
 
-	private class ListAdapter extends BaseAdapter {
-
-		private Context mContext;
-		private List<ClassItem> mList;
-
-		public ListAdapter(Context context, List<ClassItem> list) {
-			mContext = context;
-			mList = list;
+	public void changeMainView(IFragment fragment) {
+		if (fragment instanceof MenuPropertyFragment) {
+			((MenuPropertyFragment) fragment).setSlidingMenu(mSlidingMenu);
 		}
-
-		@Override
-		public int getCount() {
-			return mList.size();
-		}
-
-		@Override
-		public Object getItem(int position) {
-			return mList.get(position);
-		}
-
-		@Override
-		public long getItemId(int position) {
-			return position;
-		}
-
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
-			if (convertView == null) {
-				convertView = View.inflate(mContext,
-						android.R.layout.simple_list_item_1, null);
-			}
-			((TextView) convertView).setText(mList.get(position).getText());
-			((TextView) convertView).setTextColor(Color.DKGRAY);
-			return convertView;
-		}
-
+		getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, fragment).commit();
+		showContent();
 	}
 
 }

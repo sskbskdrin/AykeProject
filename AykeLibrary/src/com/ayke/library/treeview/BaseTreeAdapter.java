@@ -1,24 +1,21 @@
 package com.ayke.library.treeview;
 
-import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+
+import com.ayke.library.abstracts.IBaseAdapter;
+
+import java.util.List;
 
 public abstract class BaseTreeAdapter<T extends BaseTreeNode> extends
-	BaseAdapter implements OnClickListener {
+		IBaseAdapter<T> implements OnClickListener {
 	private static final int KEY = Integer.MAX_VALUE / 2;
 
-	private Context mContext;
-	private List<T> mList;
-
 	public BaseTreeAdapter(Context context, List<T> list) {
-		mContext = context;
-		mList = list;
+		super(context, list);
 		for (int i = mList.size() - 1; i >= 0; i--) {
 			T item = mList.get(i);
 			if (item.isExpand()) {
@@ -66,21 +63,6 @@ public abstract class BaseTreeAdapter<T extends BaseTreeNode> extends
 	}
 
 	@Override
-	public int getCount() {
-		return mList.size();
-	}
-
-	@Override
-	public T getItem(int position) {
-		return mList.get(position);
-	}
-
-	@Override
-	public long getItemId(int position) {
-		return position;
-	}
-
-	@Override
 	public int getItemViewType(int position) {
 		return getItem(position).isLeaf() ? 1 : 0;
 	}
@@ -105,10 +87,10 @@ public abstract class BaseTreeAdapter<T extends BaseTreeNode> extends
 	}
 
 	public abstract View getLimbView(T node, View convertView, LayoutInflater
-		inflate);
+			inflate);
 
 	public abstract View getLeafView(T node, View convertView, LayoutInflater
-		inflate);
+			inflate);
 
 	public abstract void onClickTreeItem(T node);
 

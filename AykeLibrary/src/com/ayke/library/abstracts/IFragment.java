@@ -19,9 +19,9 @@ import java.lang.ref.WeakReference;
  */
 public abstract class IFragment extends Fragment {
 	protected String TAG = "";
-	protected Bundle mBundle; //在initView中可直接使用
+	protected Bundle mBundle; //在initData中可直接使用
+	protected View mRootView;
 	protected boolean isRunning;
-	private View mRootView;
 
 	public IFragment() {
 		super();
@@ -56,33 +56,34 @@ public abstract class IFragment extends Fragment {
 	}
 
 	public final View onCreateView(LayoutInflater inflater, ViewGroup
-		container, Bundle savedInstanceState) {
+			container, Bundle savedInstanceState) {
 		if (mRootView == null) {
 			L.v(TAG, "onCreateView new");
-			mRootView = inflater.inflate(getLayoutId(), null);
+			if (getLayoutId() > 0)
+				mRootView = inflater.inflate(getLayoutId(), null);
 		}
 		if (mRootView == null) {
 			mRootView = setContentView();
 		}
 		if (mRootView == null) {
 			mRootView = super.onCreateView(inflater, container,
-				savedInstanceState);
+					savedInstanceState);
 		}
 		ViewGroup parent = (ViewGroup) mRootView.getParent();
 		if (parent != null) {
 			L.v(TAG, "onCreateView old");
 			parent.removeView(mRootView);
 		}
-		initView();
 		return mRootView;
+	}
+
+	@Override
+	public void onViewCreated(View view, Bundle savedInstanceState) {
+		initView();
 	}
 
 	public View setContentView() {
 		return null;
-	}
-
-	public View getRootView() {
-		return mRootView;
 	}
 
 	@Override
@@ -91,6 +92,10 @@ public abstract class IFragment extends Fragment {
 		L.v(TAG, "onActivityCreated");
 		mBundle = getArguments();
 		initData();
+	}
+
+	public View getRootView() {
+		return mRootView;
 	}
 
 	@Override

@@ -52,7 +52,7 @@ public class CalendarView extends LinearLayout {
 	private ArrayList<CalendarCell> mCalendarCells = new ArrayList<CalendarCell>();
 
 	/** The m on item click listener. */
-	private OnItemClickListener mOnItemClickListener;
+	private OnCellClickListener mOnCellClickListener;
 
 	public interface MeasureWidthListener {
 		public void onMeasureResult(int width);
@@ -243,8 +243,8 @@ public class CalendarView extends LinearLayout {
 	 * @param listener
 	 *            the new on item click listener
 	 */
-	public void setOnItemClickListener(OnItemClickListener listener) {
-		this.mOnItemClickListener = listener;
+	public void setOnItemClickListener(OnCellClickListener listener) {
+		this.mOnCellClickListener = listener;
 	}
 
 	/**
@@ -288,8 +288,8 @@ public class CalendarView extends LinearLayout {
 				}
 				mCalendarCell.setSelected(true);
 			}
-			if (mOnItemClickListener != null)
-				mOnItemClickListener.onClick(mCalendarCell.getCellDate());
+			if (mOnCellClickListener != null)
+				mOnCellClickListener.onClick(mCalendarCell.getCellDate());
 		}
 	};
 

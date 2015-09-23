@@ -13,8 +13,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.ayke.demo.R;
-import com.ayke.library.event.EventBus;
-import com.ayke.library.event.ThreadMode;
+import com.open.event.EventBus;
+import com.open.event.ThreadMode;
 
 public class EventBusActivity extends Activity {
 

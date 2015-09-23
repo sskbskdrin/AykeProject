@@ -137,7 +137,7 @@ public class AlphaBitmap extends IFragment {
 			y += mBitmap1.getHeight() + 10;
 			canvas.drawBitmap(mBitmap2, 10, y, p);
 			y += mBitmap3.getHeight() + 10;
-			canvas.drawBitmap(mBitmap4, 10, y, p);
+//			canvas.drawBitmap(mBitmap4, 10, y, p);
 			y += mBitmap2.getHeight() + 10;
 			p.setShader(mShader);
 			canvas.drawBitmap(mBitmap3, 10, y, p);

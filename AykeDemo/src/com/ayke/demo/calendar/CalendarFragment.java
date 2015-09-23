@@ -3,16 +3,10 @@ package com.ayke.demo.calendar;
 import java.util.Calendar;
 import java.util.Date;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.ayke.demo.R;
 import com.ayke.library.abstracts.IFragment;
 import com.ayke.library.calendarview.CalendarView;
-import com.ayke.library.calendarview.OnItemClickListener;
+import com.ayke.library.calendarview.OnCellClickListener;
 import com.ayke.library.util.DateUtils;
 import com.ayke.library.util.ToastUtil;
 import com.ayke.library.wheel.AbstractWheel;
@@ -38,7 +32,7 @@ public class CalendarFragment extends IFragment {
 	@Override
 	protected void initView() {
 		mCalendarView = $(R.id.calendarview);
-		mCalendarView.setOnItemClickListener(new OnItemClickListener() {
+		mCalendarView.setOnItemClickListener(new OnCellClickListener() {
 
 			@Override
 			public void onClick(Calendar calendar) {

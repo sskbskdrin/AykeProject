@@ -6,7 +6,7 @@ import java.util.List;
 
 import android.content.Context;
 
-import com.ayke.library.event.EventBus;
+import com.open.event.EventBus;
 
 /**
  * This thread initialize all selected tests and runs them through. Also the thread skips the tests, when it is canceled

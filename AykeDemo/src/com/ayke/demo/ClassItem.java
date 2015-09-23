@@ -1,6 +1,8 @@
 package com.ayke.demo;
 
-public class ClassItem {
+import java.io.Serializable;
+
+public class ClassItem implements Serializable {
 
 	private String className;
 	private String text;
@@ -36,4 +38,8 @@ public class ClassItem {
 		this.isActivity = isActivity;
 	}
 
+	@Override
+	public String toString() {
+		return text;
+	}
 }

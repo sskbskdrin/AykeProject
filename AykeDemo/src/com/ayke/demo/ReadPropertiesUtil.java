@@ -10,8 +10,8 @@ import java.util.Properties;
 
 public class ReadPropertiesUtil {
 
-	public static List<ClassItem> getFragmentList() {
-		List<ClassItem> list = new ArrayList<ClassItem>();
+	public static ArrayList<ClassItem> getFragmentList() {
+		ArrayList<ClassItem> list = new ArrayList<ClassItem>();
 		Properties propertier = new Properties();
 		Class<ReadPropertiesUtil> curClass = ReadPropertiesUtil.class;
 		InputStream is = null;
@@ -34,8 +34,8 @@ public class ReadPropertiesUtil {
 		return list;
 	}
 
-	public static List<ClassItem> getActivityList() {
-		List<ClassItem> list = new ArrayList<ClassItem>();
+	public static ArrayList<ClassItem> getActivityList() {
+		ArrayList<ClassItem> list = new ArrayList<ClassItem>();
 		Properties propertier = new Properties();
 		Class<ReadPropertiesUtil> curClass = ReadPropertiesUtil.class;
 		InputStream is = null;

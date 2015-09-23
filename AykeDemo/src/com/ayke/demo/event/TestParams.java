@@ -3,7 +3,7 @@ package com.ayke.demo.event;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import com.ayke.library.event.ThreadMode;
+import com.open.event.ThreadMode;
 
 public class TestParams implements Serializable {
     private static final long serialVersionUID = -2739435088947740809L;
