@@ -1,11 +1,11 @@
 package com.ayke.demo;
 
-import android.app.Application;
 import android.view.WindowManager;
 
+import com.ayke.library.BaseApplication;
 import com.ayke.library.util.SharePreferenceUtil;
 
-public class DemoApplication extends Application {
+public class DemoApplication extends BaseApplication {
 	/**
 	 * 创建全局变量 全局变量一般都比较倾向于创建一个单独的数据类文件，并使用static静态变量
 	 * 这里使用了在Application中添加数据的方法实现全局变量
@@ -15,12 +15,11 @@ public class DemoApplication extends Application {
 			.LayoutParams();
 
 	@Override
-	public void onCreate() {
-		super.onCreate();
+	protected void initialize() {
 		SharePreferenceUtil.init(this, "ayke_config");
 	}
 
-	public WindowManager.LayoutParams getMywmParams() {
-		return wmParams;
-	}
+//	public WindowManager.LayoutParams getMywmParams() {
+//		return wmParams;
+//	}
 }

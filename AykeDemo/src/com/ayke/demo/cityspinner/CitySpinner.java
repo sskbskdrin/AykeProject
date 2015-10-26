@@ -1,7 +1,9 @@
 package com.ayke.demo.cityspinner;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -20,9 +22,18 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ayke.demo.Entity.DictionaryEntity;
 import com.ayke.library.abstracts.IFragment;
+import com.ayke.library.util.ToastUtil;
+import com.open.volley.Request;
+import com.open.volley.VolleyError;
+import com.open.volley.wrapper.Entity;
+import com.open.volley.wrapper.IParseResponse;
+import com.open.volley.wrapper.VolleyEncapsulation;
+import com.open.volley.wrapper.VolleyJsonObjectRequest;
 
-public class CitySpinner extends IFragment implements OnItemSelectedListener {
+public class CitySpinner extends IFragment implements OnItemSelectedListener,
+		VolleyJsonObjectRequest.IVolleyRequestListener<DictionaryEntity> {
 
 	private static final String TAG = "CitySpinner";
 
@@ -58,26 +69,26 @@ public class CitySpinner extends IFragment implements OnItemSelectedListener {
 		LinearLayout ll = new LinearLayout(getActivity());
 		ll.setOrientation(LinearLayout.VERTICAL);
 		ll.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout
-			.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams
-			.WRAP_CONTENT));
+				.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams
+				.WRAP_CONTENT));
 		ll.addView(spinner1, new LinearLayout.LayoutParams(LinearLayout
-			.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams
-			.WRAP_CONTENT));
+				.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams
+				.WRAP_CONTENT));
 		ll.addView(spinner2, new LinearLayout.LayoutParams(LinearLayout
-			.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams
-			.WRAP_CONTENT));
+				.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams
+				.WRAP_CONTENT));
 		ll.addView(spinner3, new LinearLayout.LayoutParams(LinearLayout
-			.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams
-			.WRAP_CONTENT));
+				.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams
+				.WRAP_CONTENT));
 		spinner1.setPrompt("省");
 		spinner2.setPrompt("城市");
 		spinner3.setPrompt("地区");
 
 		spinner1.setAdapter(new ListAdapter(getActivity(), getList(1, ""), 1));
 		spinner2.setAdapter(new ListAdapter(getActivity(), new
-			ArrayList<CityItem>(), 2));
+				ArrayList<CityItem>(), 2));
 		spinner3.setAdapter(new ListAdapter(getActivity(), new
-			ArrayList<CityItem>(), 3));
+				ArrayList<CityItem>(), 3));
 
 		spinner1.setOnItemSelectedListener(this);
 		spinner2.setOnItemSelectedListener(this);
@@ -125,20 +136,29 @@ public class CitySpinner extends IFragment implements OnItemSelectedListener {
 		if (adapterId == 1) {
 			province = item.getName();
 			spinner2.setAdapter(new ListAdapter(getActivity(), getList(2, item
-				.getPcode()), 2));
+					.getPcode()), 2));
 		} else if (adapterId == 2) {
 			city = item.getName();
 			spinner3.setAdapter(new ListAdapter(getActivity(), getList(3, item
-				.getPcode()), 3));
+					.getPcode()), 3));
 		} else if (adapterId == 3) {
 			district = item.getName();
-			Toast.makeText(getActivity(), province + " " + city + " " +
-				district, Toast.LENGTH_LONG).show();
+			ToastUtil.show(getActivity(), province + " " + city + " " + district);
 		}
 	}
 
 	@Override
 	public void onNothingSelected(AdapterView<?> parent) {
+
+	}
+
+	@Override
+	public void onVolleySuccess(DictionaryEntity result, boolean isSuccess, int id) {
+		ToastUtil.show(getActivity(), result.toString(), true);
+	}
+
+	@Override
+	public void onVolleyError(VolleyError error, int id) {
 
 	}
 
@@ -192,7 +212,7 @@ public class CitySpinner extends IFragment implements OnItemSelectedListener {
 		public View getView(int position, View convertView, ViewGroup parent) {
 			if (convertView == null) {
 				convertView = View.inflate(mContext, android.R.layout
-					.simple_list_item_1, null);
+						.simple_list_item_1, null);
 			}
 			((TextView) convertView).setText(mList.get(position).getName());
 			return convertView;

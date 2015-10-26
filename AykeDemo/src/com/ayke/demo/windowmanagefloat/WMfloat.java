@@ -15,7 +15,6 @@ import com.ayke.library.abstracts.IFragment;
 
 public class WMfloat extends IFragment {
 	private WindowManager mWindowManager;
-	private WindowManager.LayoutParams param;
 	private FloatView mLayout;
 
 	@Override
@@ -39,8 +38,7 @@ public class WMfloat extends IFragment {
 		mWindowManager = (WindowManager) getActivity().getApplicationContext()
 				.getSystemService(Context.WINDOW_SERVICE);
 		// 设置LayoutParams(全局变量）相关参数
-		param = ((DemoApplication) getActivity().getApplication())
-				.getMywmParams();
+		WindowManager.LayoutParams param = new WindowManager.LayoutParams();
 
 		param.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT; // 系统提示类型,重要
 		param.format = 1;
@@ -62,6 +60,7 @@ public class WMfloat extends IFragment {
 		param.height = 140;
 
 		// 显示myFloatView图像
+		mLayout.setWmParams(param);
 		mWindowManager.addView(mLayout, param);
 
 	}

@@ -1,6 +1,5 @@
 package com.ayke.library.util;
 
-import android.app.Activity;
 import android.content.Context;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
@@ -13,7 +12,7 @@ public class SysUtils {
 	private static float density;
 
 	public static void init(Context context) {
-		WindowManager wmManager = ((Activity) context).getWindowManager();
+		WindowManager wmManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 		DisplayMetrics metric = new DisplayMetrics();
 		wmManager.getDefaultDisplay().getMetrics(metric);
 		screenWidth = metric.widthPixels;
@@ -29,9 +28,13 @@ public class SysUtils {
 		return context.getResources().getDisplayMetrics().heightPixels;
 	}
 
+	public static int dip2px(float dipValue) {
+		return (int) (dipValue * density + 0.5f);
+	}
+
 	/**
 	 * DIP转换成PX
-	 * 
+	 *
 	 * @param context
 	 * @param dipValue
 	 * @return
@@ -43,7 +46,7 @@ public class SysUtils {
 
 	/**
 	 * PX转换成DIP
-	 * 
+	 *
 	 * @param context
 	 * @param pxValue
 	 * @return
@@ -55,7 +58,7 @@ public class SysUtils {
 
 	/**
 	 * PX转换SP
-	 * 
+	 *
 	 * @param context
 	 * @param pxValue
 	 * @return
@@ -67,7 +70,7 @@ public class SysUtils {
 
 	/**
 	 * SP转换PX
-	 * 
+	 *
 	 * @param context
 	 * @param spValue
 	 * @return

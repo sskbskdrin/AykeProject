@@ -24,7 +24,7 @@ public class SharePreferenceUtil {
 		mSheSharedPreferences = context.getSharedPreferences(name, mode);
 	}
 
-	private static boolean isInit() {
+	public static boolean isInit() {
 		return mSheSharedPreferences != null;
 	}
 

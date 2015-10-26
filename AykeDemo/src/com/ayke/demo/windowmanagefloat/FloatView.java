@@ -17,18 +17,16 @@ public class FloatView extends View {
 	private WindowManager wm = (WindowManager) getContext()
 			.getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
 
-	private WindowManager.LayoutParams wmParams = ((DemoApplication) getContext()
-			.getApplicationContext()).getMywmParams();
+	private WindowManager.LayoutParams wmParams;
 
 	public FloatView(Context context) {
 		super(context);
 	}
-	
-	@Override
-	public boolean dispatchTouchEvent(MotionEvent event) {
-		return super.dispatchTouchEvent(event);
-	}
 
+	public void setWmParams(WindowManager.LayoutParams params){
+		wmParams = params;
+	}
+	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		// 获取相对屏幕的坐标，即以屏幕左上角为原点
