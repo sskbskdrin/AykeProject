@@ -24,9 +24,9 @@ public class Transition3d extends IFragment implements OnClickListener {
 	@Override
 	protected void initView() {
 
-		mImageView0 = $(R.id.picture0);
-		mImageView1 = $(R.id.picture1);
-		mContainer = $(R.id.container);
+		mImageView0 = getView(R.id.picture0);
+		mImageView1 = getView(R.id.picture1);
+		mContainer = getView(R.id.container);
 
 		mImageView0.setClickable(true);
 		mImageView0.setFocusable(true);

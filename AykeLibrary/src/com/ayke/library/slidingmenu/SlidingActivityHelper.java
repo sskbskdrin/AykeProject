@@ -52,7 +52,7 @@ public class SlidingActivityHelper {
 	public void onPostCreate(Bundle savedInstanceState) {
 		if (mViewBehind == null || mViewAbove == null) {
 			throw new IllegalStateException("Both setBehindContentView must be called " +
-					"in onCreate in addition to setContentView.");
+					"in onCreate in addition to getContentView.");
 		}
 
 		mOnPostCreateCalled = true;
@@ -140,7 +140,7 @@ public class SlidingActivityHelper {
 	 * Set the activity content to an explicit view. This view is placed directly into the activity's view
 	 * hierarchy. It can itself be a complex view hierarchy. When calling this method, the layout parameters
 	 * of the specified view are ignored. Both the width and the height of the view are set by default to
-	 * MATCH_PARENT. To use your own layout parameters, invoke setContentView(android.view.View,
+	 * MATCH_PARENT. To use your own layout parameters, invoke getContentView(android.view.View,
 	 * android.view.ViewGroup.LayoutParams) instead.
 	 *
 	 * @param v The desired content to display.

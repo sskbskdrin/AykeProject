@@ -1,112 +1,92 @@
 package com.ayke.library.listview.pinnedsection;
 
+import android.content.Context;
+import android.view.View;
+import android.widget.SectionIndexer;
+
+import com.ayke.library.abstracts.IBaseAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Context;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.SectionIndexer;
+public abstract class SectionAdapter<T extends SectionItem> extends IBaseAdapter<T> implements
+        SectionIndexer {
+    private static final int ITEM = 0;
+    private static final int SECTION = 1;
 
-public abstract class SectionAdapter extends BaseAdapter implements
-		SectionIndexer {
-	private static final int ITEM = 0;
-	private static final int SECTION = 1;
+    private final List<T> mSectionList = new ArrayList<>();
 
-	private List<SectionItem> mList = new ArrayList<SectionItem>();
-	private List<SectionItem> mSectionList = new ArrayList<SectionItem>();
+    protected Context mContext;
 
-	protected Context mContext;
+    protected SectionAdapter(Context context, List<T> list) {
+        super(context, list);
+    }
 
-	public SectionAdapter(Context context, List<SectionItem> list) {
-		mContext = context;
-		setList(list);
-	}
+    protected SectionAdapter(Context context, List<T> list, int layoutId) {
+        super(context, list, layoutId);
+    }
 
-	private void setList(List<SectionItem> list) {
-		if (list == null)
-			throw new NullPointerException("list is null");
-		if (list.size() == 0)
-			list = new ArrayList<SectionItem>();
-		else if (!(list.get(0) instanceof SectionItem))
-			throw new IllegalArgumentException(
-					"Does your adapter implements SectionItem?");
-		mList = list;
-		mSectionList.clear();
-		for (SectionItem item : mList) {
-			if (item.isSection())
-				mSectionList.add(item);
-		}
-	}
+    private void setList() {
+        mSectionList.clear();
+        for (T item : mList) {
+            if (item.isSection()) {
+                mSectionList.add(item);
+            }
+        }
+    }
 
-	public void updataList(List<SectionItem> list) {
-		setList(list);
-		this.notifyDataSetChanged();
-	}
+    @Override
+    public final void notifyDataSetChanged() {
+        setList();
+        super.notifyDataSetChanged();
+    }
 
-	@Override
-	public int getCount() {
-		return mList.size();
-	}
+    @Override
+    protected final void convert(View view, int position, T t) {
+        if (t.isSection()) {
+            convertSectionView(view, position, t);
+        } else {
+            convertItemView(view, position, t);
+        }
+    }
 
-	@Override
-	public Object getItem(int position) {
-		return mList.get(position);
-	}
+    public abstract void convertItemView(View view, int position, T t);
 
-	@Override
-	public long getItemId(int position) {
-		return position;
-	}
+    public abstract void convertSectionView(View view, int position, T t);
 
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		Object item = getItem(position);
-		if (((SectionItem) item).isSection()) {
-			return getSectionView(position, convertView, item);
-		}
-		return getItemView(position, convertView, item);
-	}
+    @Override
+    public int getViewTypeCount() {
+        return 2;
+    }
 
-	public abstract View getItemView(int position, View convertView, Object obj);
+    @Override
+    public int getItemViewType(int position) {
+        return getItem(position).isSection() ? SECTION : ITEM;
+    }
 
-	public abstract View getSectionView(int position, View convertView,
-			Object obj);
+    public boolean isItemViewTypePinned(int viewType) {
+        return viewType == SECTION;
+    }
 
-	@Override
-	public int getViewTypeCount() {
-		return 2;
-	}
+    @Override
+    public int getPositionForSection(int section) {
+        if (section >= mSectionList.size()) {
+            section = mSectionList.size() - 1;
+        }
+        return mSectionList.get(section).getlistPosition();
+    }
 
-	@Override
-	public int getItemViewType(int position) {
-		return ((SectionItem) getItem(position)).isSection() ? SECTION : ITEM;
-	}
+    @Override
+    public int getSectionForPosition(int position) {
+        if (position >= getCount()) {
+            position = getCount() - 1;
+        }
+        return mList.get(position).getSectionPosition();
+    }
 
-	public boolean isItemViewTypePinned(int viewType) {
-		return viewType == SECTION;
-	}
-
-	@Override
-	public int getPositionForSection(int section) {
-		if (section >= mSectionList.size()) {
-			section = mSectionList.size() - 1;
-		}
-		return mSectionList.get(section).getlistPosition();
-	}
-
-	@Override
-	public int getSectionForPosition(int position) {
-		if (position >= getCount()) {
-			position = getCount() - 1;
-		}
-		return mList.get(position).getSectionPosition();
-	}
-
-	@Override
-	public Object[] getSections() {
-		return mSectionList.toArray();
-	}
+    @Override
+    public Object[] getSections() {
+        return mSectionList.toArray();
+    }
 
 }

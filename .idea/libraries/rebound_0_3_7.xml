@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="rebound-0.3.7">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/AykeLibrary/libs/rebound-0.3.7.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

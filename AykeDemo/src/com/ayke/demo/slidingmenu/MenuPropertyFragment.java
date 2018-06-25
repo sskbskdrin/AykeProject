@@ -23,7 +23,7 @@ public class MenuPropertyFragment extends IFragment {
 	@Override
 	protected void initView() {
 		// left and right modes
-		RadioGroup mode = $(R.id.mode);
+		RadioGroup mode = getView(R.id.mode);
 		mode.check(R.id.left);
 		mode.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			@Override
@@ -50,7 +50,7 @@ public class MenuPropertyFragment extends IFragment {
 		});
 
 		// touch mode stuff
-		RadioGroup touchAbove = $(R.id.touch_above);
+		RadioGroup touchAbove = getView(R.id.touch_above);
 		touchAbove.check(R.id.touch_above_full);
 		touchAbove.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			@Override
@@ -73,7 +73,7 @@ public class MenuPropertyFragment extends IFragment {
 		});
 
 		// scroll scale stuff
-		SeekBar scrollScale = $(R.id.scroll_scale);
+		SeekBar scrollScale = getView(R.id.scroll_scale);
 		scrollScale.setMax(1000);
 		scrollScale.setProgress(333);
 		scrollScale.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
@@ -93,7 +93,7 @@ public class MenuPropertyFragment extends IFragment {
 		});
 
 		// behind width stuff
-		SeekBar behindWidth = $(R.id.behind_width);
+		SeekBar behindWidth = getView(R.id.behind_width);
 		behindWidth.setMax(1000);
 		behindWidth.setProgress(750);
 		behindWidth.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
@@ -114,7 +114,7 @@ public class MenuPropertyFragment extends IFragment {
 		});
 
 		// shadow stuff
-		CheckBox shadowEnabled = $(R.id.shadow_enabled);
+		CheckBox shadowEnabled = getView(R.id.shadow_enabled);
 		shadowEnabled.setChecked(true);
 		shadowEnabled.setOnCheckedChangeListener(new CompoundButton
 				.OnCheckedChangeListener() {
@@ -134,7 +134,7 @@ public class MenuPropertyFragment extends IFragment {
 				}
 			}
 		});
-		SeekBar shadowWidth = $(R.id.shadow_width);
+		SeekBar shadowWidth = getView(R.id.shadow_width);
 		shadowWidth.setMax(1000);
 		shadowWidth.setProgress(75);
 		shadowWidth.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
@@ -158,7 +158,7 @@ public class MenuPropertyFragment extends IFragment {
 		});
 
 		// fading stuff
-		CheckBox fadeEnabled = $(R.id.fade_enabled);
+		CheckBox fadeEnabled = getView(R.id.fade_enabled);
 		fadeEnabled.setChecked(true);
 		fadeEnabled.setOnCheckedChangeListener(new CompoundButton
 				.OnCheckedChangeListener() {
@@ -167,7 +167,7 @@ public class MenuPropertyFragment extends IFragment {
 				mSlidingMenu.setFadeEnabled(isChecked);
 			}
 		});
-		SeekBar fadeDeg = $(R.id.fade_degree);
+		SeekBar fadeDeg = getView(R.id.fade_degree);
 		fadeDeg.setMax(1000);
 		fadeDeg.setProgress(666);
 		fadeDeg.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {

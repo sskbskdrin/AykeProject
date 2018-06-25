@@ -20,7 +20,7 @@ public class WidgetFragment extends IFragment {
 			"december",};
 		ArrayAdapter<String> adapter0 = new ArrayAdapter<String>(getActivity()
 			, R.layout.simple_text_center_view, data0);
-		final Switcher switcher0 = $(R.id.switcher0);
+		final Switcher switcher0 = getView(R.id.switcher0);
 		switcher0.setAdapter(adapter0);
 	}
 

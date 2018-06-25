@@ -28,21 +28,21 @@ public class CustomWheelFragment extends IFragment {
 	@Override
 	protected void initView() {
 
-		final AbstractWheel hours = $(R.id.hour_horizontal);
+		final AbstractWheel hours = getView(R.id.hour_horizontal);
 		NumericWheelAdapter hourAdapter = new NumericWheelAdapter(getActivity
 			(), 0, 23, "%02d");
 		hourAdapter.setItemResource(R.layout.item_wheel_text_dark);
 		hourAdapter.setItemTextResource(R.id.text);
 		hours.setViewAdapter(hourAdapter);
 
-		final AbstractWheel mins = $(R.id.mins);
+		final AbstractWheel mins = getView(R.id.mins);
 		NumericWheelAdapter minAdapter = new NumericWheelAdapter(getActivity()
 			, 0, 59, "%02d");
 		minAdapter.setItemResource(R.layout.item_wheel_text_dark);
 		minAdapter.setItemTextResource(R.id.text);
 		mins.setViewAdapter(minAdapter);
 
-		final AbstractWheel ampm = $(R.id.ampm);
+		final AbstractWheel ampm = getView(R.id.ampm);
 		ArrayWheelAdapter<String> ampmAdapter = new ArrayWheelAdapter<String>
 			(getActivity(), new String[]{"01", "02", "03"});
 		ampmAdapter.setItemResource(R.layout.item_wheel_text_dark);
@@ -55,7 +55,7 @@ public class CustomWheelFragment extends IFragment {
 		mins.setCurrentItem(calendar.get(Calendar.MINUTE));
 		ampm.setCurrentItem(calendar.get(Calendar.AM_PM));
 
-		final AbstractWheel day = $(R.id.day);
+		final AbstractWheel day = getView(R.id.day);
 		DayArrayAdapter dayAdapter = new DayArrayAdapter(getActivity(),
 			calendar);
 		day.setViewAdapter(dayAdapter);
@@ -100,7 +100,7 @@ public class CustomWheelFragment extends IFragment {
 
 			View view = super.getItem(index, cachedView, parent);
 
-			TextView weekday = (TextView) $(R.id.time2_weekday);
+			TextView weekday = (TextView) getView(R.id.time2_weekday);
 			if (day == 0) {
 				weekday.setText("");
 			} else {
@@ -108,7 +108,7 @@ public class CustomWheelFragment extends IFragment {
 				weekday.setText(format.format(newCalendar.getTime()));
 			}
 
-			TextView monthday = (TextView) $(R.id.time2_monthday);
+			TextView monthday = (TextView) getView(R.id.time2_monthday);
 			if (day == 0) {
 				monthday.setText("Today");
 				monthday.setTextColor(0xFF0000F0);

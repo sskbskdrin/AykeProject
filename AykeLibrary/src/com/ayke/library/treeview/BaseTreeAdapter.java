@@ -1,97 +1,94 @@
 package com.ayke.library.treeview;
 
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 
 import com.ayke.library.abstracts.IBaseAdapter;
 
 import java.util.List;
 
-public abstract class BaseTreeAdapter<T extends BaseTreeNode> extends
-		IBaseAdapter<T> implements OnClickListener {
-	private static final int KEY = Integer.MAX_VALUE / 2;
+public abstract class BaseTreeAdapter<T extends BaseTreeNode> extends IBaseAdapter<T> implements
+        OnClickListener {
+    private static final int KEY = Integer.MAX_VALUE / 2;
+    protected static final int TYPE_LIMB = 0;
+    protected static final int TYPE_LEAF = 1;
 
-	public BaseTreeAdapter(Context context, List<T> list) {
-		super(context, list);
-		for (int i = mList.size() - 1; i >= 0; i--) {
-			T item = mList.get(i);
-			if (item.isExpand()) {
-				expand(item, i);
-			}
-		}
-	}
+    public BaseTreeAdapter(Context context, List<T> list) {
+        super(context, list);
+        for (int i = mList.size() - 1; i >= 0; i--) {
+            T item = mList.get(i);
+            if (item.isExpand()) {
+                expand(item, i);
+            }
+        }
+    }
 
-	@Override
-	public void onClick(View v) {
-		int position = (Integer) v.getTag(KEY);
-		T node = getItem(position);
-		onClickTreeItem(node);
-		if (!node.isLeaf()) {
-			if (node.isExpand()) {
-				collapse(node, position);
-			} else {
-				expand(node, position);
-			}
-			node.setExpand(!node.isExpand());
-		}
-		notifyDataSetChanged();
-	}
+    @Override
+    public void onClick(View v) {
+        int position = (Integer) v.getTag(KEY);
+        T node = getItem(position);
+        onClickTreeItem(node);
+        if (!node.isLeaf()) {
+            if (node.isExpand()) {
+                collapse(node, position);
+            } else {
+                expand(node, position);
+            }
+            node.setExpand(!node.isExpand());
+        }
+        notifyDataSetChanged();
+    }
 
-	private void collapse(T node, int position) {
-		for (int i = 0; i < node.getChildList().size(); i++) {
-			T item = mList.remove(position + 1);
-			if (item.isExpand()) {
-				collapse(item, position);
-			}
-		}
-	}
+    private void collapse(T node, int position) {
+        for (int i = 0; i < node.getChildList().size(); i++) {
+            T item = mList.remove(position + 1);
+            if (item.isExpand()) {
+                collapse(item, position);
+            }
+        }
+    }
 
-	private int expand(T node, int position) {
-		int count = 0;
-		for (int i = 0; i < node.getChildList().size(); i++) {
-			T item = (T) node.getChildList().get(i);
-			mList.add(position + i + 1, item);
-			count++;
-			if (item.isExpand()) {
-				position += expand(item, position + i + 1);
-			}
-		}
-		return count;
-	}
+    private int expand(T node, int position) {
+        int count = 0;
+        for (int i = 0; i < node.getChildList().size(); i++) {
+            T item = (T) node.getChildList().get(i);
+            mList.add(position + i + 1, item);
+            count++;
+            if (item.isExpand()) {
+                position += expand(item, position + i + 1);
+            }
+        }
+        return count;
+    }
 
-	@Override
-	public int getItemViewType(int position) {
-		return getItem(position).isLeaf() ? 1 : 0;
-	}
+    @Override
+    public int getItemViewType(int position) {
+        return getItem(position).isLeaf() ? TYPE_LEAF : TYPE_LIMB;
+    }
 
-	@Override
-	public int getViewTypeCount() {
-		return 2;
-	}
+    @Override
+    public int getViewTypeCount() {
+        return 2;
+    }
 
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		T item = getItem(position);
-		LayoutInflater factory = LayoutInflater.from(mContext);
-		if (getItemViewType(position) == 0) {
-			convertView = getLimbView(item, convertView, factory);
-		} else {
-			convertView = getLeafView(item, convertView, factory);
-		}
-		convertView.setOnClickListener(this);
-		convertView.setTag(KEY, position);
-		return convertView;
-	}
+    protected abstract int getLayoutId(int type);
 
-	public abstract View getLimbView(T node, View convertView, LayoutInflater
-			inflate);
+    @Override
+    protected void convert(View view, int position, T t) {
+        if (getItemViewType(position) == TYPE_LIMB) {
+            convertLimbView(view, position, t);
+        } else {
+            convertLeafView(view, position, t);
+        }
+        view.setOnClickListener(this);
+        view.setTag(KEY, position);
+    }
 
-	public abstract View getLeafView(T node, View convertView, LayoutInflater
-			inflate);
+    public abstract void convertLimbView(View view, int position, T node);
 
-	public abstract void onClickTreeItem(T node);
+    public abstract void convertLeafView(View view, int position, T node);
+
+    public abstract void onClickTreeItem(T node);
 
 }

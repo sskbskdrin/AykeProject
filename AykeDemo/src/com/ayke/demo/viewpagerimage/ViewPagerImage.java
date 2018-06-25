@@ -37,8 +37,8 @@ public class ViewPagerImage extends IFragment implements OnPageChangeListener {
 
 	@Override
 	protected void initView() {
-		ViewGroup group = $(R.id.viewGroup);
-		AutoScrollViewPager mViewPager = $(R.id.viewPager);
+		ViewGroup group = getView(R.id.viewGroup);
+		AutoScrollViewPager mViewPager = getView(R.id.viewPager);
 		// 将点点加入到ViewGroup中
 		tips = new ImageView[imgIdArray.length];
 		for (int i = 0; i < tips.length; i++) {

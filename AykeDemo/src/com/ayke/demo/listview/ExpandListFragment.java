@@ -36,7 +36,7 @@ public class ExpandListFragment extends IFragment {
 	}
 
 	@Override
-	public View setContentView() {
+	public View getContentView() {
 		ExpandListView list = new ExpandListView(getActivity());
 
 		List<String> list1 = new ArrayList<String>();

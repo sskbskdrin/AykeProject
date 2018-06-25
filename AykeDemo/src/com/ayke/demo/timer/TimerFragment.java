@@ -27,17 +27,17 @@ public class TimerFragment extends IFragment implements OnClickListener,
 		timer = new TextView[5];
 		timerRun = new boolean[5];
 		timerCount = new int[5];
-		$(R.id.timer_1_ms_btn).setOnClickListener(this);
-		$(R.id.timer_100_ms_btn).setOnClickListener(this);
-		$(R.id.timer_1000_ms_btn).setOnClickListener(this);
-		$(R.id.timer_1s_1_ms_btn).setOnClickListener(this);
-		$(R.id.timer_1s_10_ms_btn).setOnClickListener(this);
-		timer[0] = $(R.id.timer_1_ms);
-		timer[1] = $(R.id.timer_100_ms);
-		timer[2] = $(R.id.timer_1000_ms);
-		timer[3] = $(R.id.timer_1s_1_ms);
-		timer[4] = $(R.id.timer_1s_10_ms);
-		$(R.id.timer_all).setOnClickListener(new OnClickListener() {
+		getView(R.id.timer_1_ms_btn).setOnClickListener(this);
+		getView(R.id.timer_100_ms_btn).setOnClickListener(this);
+		getView(R.id.timer_1000_ms_btn).setOnClickListener(this);
+		getView(R.id.timer_1s_1_ms_btn).setOnClickListener(this);
+		getView(R.id.timer_1s_10_ms_btn).setOnClickListener(this);
+		timer[0] = getView(R.id.timer_1_ms);
+		timer[1] = getView(R.id.timer_100_ms);
+		timer[2] = getView(R.id.timer_1000_ms);
+		timer[3] = getView(R.id.timer_1s_1_ms);
+		timer[4] = getView(R.id.timer_1s_10_ms);
+		getView(R.id.timer_all).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				for (int i = 0; i < 5; i++) {
@@ -45,12 +45,11 @@ public class TimerFragment extends IFragment implements OnClickListener,
 						TimerManage.getInstance().stopTimerTask("timer" + i);
 						((Button) v).setText("开始");
 					} else {
-						TimerManage.getInstance().addTimerTask("timer" + i,
-							-1, 0, 10, TimerFragment.this);
+						TimerManage.getInstance().startTimerTask("timer" + i,
+							10, -1, 0, TimerFragment.this);
 						((Button) v).setText("停止");
 						timer[i].setText("0");
 						timerCount[i] = 0;
-						TimerManage.getInstance().startTimerTask("timer" + i);
 					}
 					timerRun[i] = !timerRun[i];
 				}
@@ -108,12 +107,11 @@ public class TimerFragment extends IFragment implements OnClickListener,
 			TimerManage.getInstance().stopTimerTask("timer" + index);
 			((Button) v).setText("开始");
 		} else {
-			TimerManage.getInstance().addTimerTask("timer" + index, count,
-				delay, period, this);
+			TimerManage.getInstance().startTimerTask("timer" + index, period, count,
+				delay, this);
 			((Button) v).setText("停止");
 			timer[index].setText("0");
 			timerCount[index] = 0;
-			TimerManage.getInstance().startTimerTask("timer" + index);
 		}
 		timerRun[index] = !timerRun[index];
 	}

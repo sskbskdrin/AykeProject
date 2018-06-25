@@ -23,23 +23,23 @@ public class TestPanels extends IFragment implements OnPanelListener {
 	protected void initView() {
 		Panel panel;
 
-		panel = $(R.id.topPanel);
+		panel = getView(R.id.topPanel);
 		panel.setOnPanelListener(this);
 		panel.setInterpolator(new BounceInterpolator(Type.OUT));
 
-		panel = $(R.id.leftPanel1);
+		panel = getView(R.id.leftPanel1);
 		panel.setOnPanelListener(this);
 		panel.setInterpolator(new BackInterpolator(Type.OUT, 2));
 
-		panel = $(R.id.leftPanel2);
+		panel = getView(R.id.leftPanel2);
 		panel.setOnPanelListener(this);
 		panel.setInterpolator(new BackInterpolator(Type.OUT, 2));
 
-		panel = $(R.id.rightPanel);
+		panel = getView(R.id.rightPanel);
 		panel.setOnPanelListener(this);
 		panel.setInterpolator(new ExpoInterpolator(Type.OUT));
 
-		panel = $(R.id.bottomPanel);
+		panel = getView(R.id.bottomPanel);
 		panel.setOnPanelListener(this);
 		panel.setInterpolator(new ElasticInterpolator(Type.OUT, 1.0f, 0.3f));
 

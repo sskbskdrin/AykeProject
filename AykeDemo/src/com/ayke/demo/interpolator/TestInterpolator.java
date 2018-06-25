@@ -50,13 +50,13 @@ public class TestInterpolator extends IFragment {
 		animTop = AnimationUtils.loadAnimation(getActivity(), R.anim
 			.slide_in_top);
 
-		plot = $(R.id.plot);
-		easing = $(R.id.easing);
-		button0 = $(R.id.button0);
+		plot = getView(R.id.plot);
+		easing = getView(R.id.easing);
+		button0 = getView(R.id.button0);
 		button0.setOnClickListener(clickListener);
-		button1 = $(R.id.button1);
+		button1 = getView(R.id.button1);
 		button1.setOnClickListener(clickListener);
-		text = $(R.id.text);
+		text = getView(R.id.text);
 		easing.setOnItemSelectedListener(new OnItemSelectedListener() {
 			public void onItemSelected(AdapterView<?> parent, View view, int
 				position, long id) {

@@ -54,7 +54,7 @@ public class SlideDelItemFragment extends IFragment implements
 			.simple_list_item_1, android.R.id.text1, new ArrayList<String>
 			(Arrays.asList(items)));
 
-		ListView listView = $(android.R.id.list);
+		ListView listView = getView(android.R.id.list);
 		listView.setAdapter(mAdapter);
 
 		SlideDeleteListTouchListener touchListener = new
@@ -78,7 +78,7 @@ public class SlideDelItemFragment extends IFragment implements
 		listView.setOnScrollListener(touchListener.makeScrollListener());
 
 		// Set up normal ViewGroup example
-		final ViewGroup dismissContainer = $(R.id.dismissable_container);
+		final ViewGroup dismissContainer = getView(R.id.dismissable_container);
 		for (int i = 0; i < items.length; i++) {
 			Button dismissButton = new Button(getActivity());
 			dismissButton.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup

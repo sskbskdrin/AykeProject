@@ -31,7 +31,7 @@ public class CalendarFragment extends IFragment {
 
 	@Override
 	protected void initView() {
-		mCalendarView = $(R.id.calendarview);
+		mCalendarView = getView(R.id.calendarview);
 		mCalendarView.setOnItemClickListener(new OnCellClickListener() {
 
 			@Override
@@ -41,8 +41,8 @@ public class CalendarFragment extends IFragment {
 			}
 		});
 
-		yearSwitcher = $(R.id.calendar_year);
-		monthSwitcher = $(R.id.calendar_month);
+		yearSwitcher = getView(R.id.calendar_year);
+		monthSwitcher = getView(R.id.calendar_month);
 
 		NumericWheelAdapter adapter = new NumericWheelAdapter(getActivity(),
 			1980, 2100, "%4d");
