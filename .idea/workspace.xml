@@ -10,193 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="660005b0-57a4-4eb6-a450-fa30b2295bf8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeDemo/res/layout/activity_capture.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/scan/CaptureActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/libs/armeabi/liblept.so" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/libs/armeabi/libpngt.so" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/libs/armeabi/libtess.so" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/libs/tess-two.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/res/raw/beep.ogg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/camera/AmbientLightManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/camera/AutoFocusManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/camera/BeepManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/camera/CameraConfigurationManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/camera/CameraConfigurationUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/camera/CameraManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/camera/PreviewCallback.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/camera/open/OpenCameraInterface.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/decode/DecodeFormatManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/decode/DecodeHandler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/decode/DecodeHintManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/decode/DecodeThread.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/decode/PortraitLuminanceSource.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tesseract/Dic.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tesseract/DictionaryUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tesseract/UnzipFromAssets.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tools/CaptureActivityHandler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tools/Contents.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tools/FinishListener.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tools/IScanResultListener.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tools/Intents.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tools/MessageBox.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tools/ScanManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tools/ViewfinderView.java" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/cache.properties.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/fileSnapshots.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/outputFileStates.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.6/taskArtifacts/taskArtifacts.bin" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/keayuan.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/android_support_v4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/nineoldandroids_2_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/rebound_0_3_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/.classpath" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/.project" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AykeDemo/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/AykeDemo.iml" afterPath="$PROJECT_DIR$/AykeDemo/AykeDemo.iml" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/build.gradle" afterPath="$PROJECT_DIR$/AykeDemo/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/Entity/DictionaryEntity.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tesseract/DictionaryEntity.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/activity.properties" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/activity.properties" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/alphabitmap/AlphaBitmap.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/calendar/CalendarFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/calendar/CalendarFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/cityspinner/CitySpinner.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/cityspinner/CitySpinner.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/common/CommonFragmentActivity.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/common/CommonFragmentActivity.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/common/SampleListFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/common/SampleListFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/event/EventBusActivity.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/event/PerfTestEventBus.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/event/Test.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/event/TestEvent.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/event/TestFinishedEvent.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/event/TestParams.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/event/TestRunner.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/fragment.properties" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/fragment.properties" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/interpolator/TestInterpolator.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/interpolator/TestInterpolator.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/ClickDelItemFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/ClickDelItemFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/ExpandListFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/ExpandListFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/PinnedSectionListFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/PinnedSectionListFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/RefreshListFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/RefreshListFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/SlideDelItemFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/SlideDelItemFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/SlideMenuListFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/listview/SlideMenuListFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/panel/TestPanels.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/panel/TestPanels.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/residemenu/MenuActivity.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/residemenu/MenuActivity.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/slidingmenu/MenuPropertyFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/slidingmenu/MenuPropertyFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/timer/TimerFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/timer/TimerFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/transition3d/Transition3d.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/transition3d/Transition3d.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/viewpagerimage/ViewPagerImage.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/viewpagerimage/ViewPagerImage.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/wheel/CustomWheelFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/wheel/CustomWheelFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/widget/TreeFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/widget/TreeFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/widget/WidgetFragment.java" afterPath="$PROJECT_DIR$/AykeDemo/src/com/ayke/demo/widget/WidgetFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/.classpath" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/.project" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AykeLibrary/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/AykeLibrary.iml" afterPath="$PROJECT_DIR$/AykeLibrary/AykeLibrary.iml" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/build.gradle" afterPath="$PROJECT_DIR$/AykeLibrary/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/libs/android-support-v4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/libs/android-support-v4.jar.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/proguard-project.txt" afterPath="$PROJECT_DIR$/AykeLibrary/proguard-project.txt" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/proguard.cfg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/BaseApplication.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/BaseApplication.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/abstracts/IBaseAdapter.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/abstracts/IBaseAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/abstracts/IFragment.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/abstracts/IFragment.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/calendarview/OnCellClickListener.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/calendarview/OnCellClickListener.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/download/DownloadManager.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/download/DownloadTask.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/download/IDownloadListener.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/listview/pinnedsection/SectionAdapter.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/listview/pinnedsection/SectionAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/slidingmenu/CustomViewAbove.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/slidingmenu/CustomViewAbove.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/slidingmenu/SlidingActivityHelper.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/slidingmenu/SlidingActivityHelper.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/slidingmenu/SlidingFragmentActivity.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/slidingmenu/SlidingFragmentActivity.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/timer/TimerManage.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/timer/TimerManage.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/treeview/BaseTreeAdapter.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/treeview/BaseTreeAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/util/FileUtils.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/util/FileUtils.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/util/SharePreferenceUtil.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/util/SharePreferenceUtil.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/AsyncPoster.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/BackgroundPoster.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/EventBus.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/EventBusBuilder.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/EventBusException.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/HandlerPoster.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/NoSubscriberEvent.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/PendingPost.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/PendingPostQueue.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/SubscriberExceptionEvent.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/SubscriberMethod.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/SubscriberMethodFinder.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/Subscription.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/ThreadMode.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/util/AsyncExecutor.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/util/ErrorDialogConfig.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/util/ErrorDialogFragmentFactory.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/util/ErrorDialogFragments.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/util/ErrorDialogManager.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/util/ExceptionToResourceMapping.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/util/HasExecutionScope.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/event/util/ThrowableFailureEvent.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/AuthFailureError.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/Cache.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/CacheDispatcher.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/DefaultRetryPolicy.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/ExecutorDelivery.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/Network.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/NetworkDispatcher.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/NetworkError.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/NetworkResponse.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/NoConnectionError.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/ParseError.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/camera/FrontLightMode.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/Request.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/RequestQueue.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/Response.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/ResponseDelivery.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/RetryPolicy.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/ServerError.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/TimeoutError.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/VolleyError.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/VolleyLog.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/AndroidAuthenticator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/Authenticator.java" afterPath="$PROJECT_DIR$/AykeLibrary/src/com/open/zxing/tools/ViewfinderResultPointCallback.java" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/BasicNetwork.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/ByteArrayPool.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/ClearCacheRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/DiskBasedCache.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/HttpClientStack.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/HttpHeaderParser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/HttpStack.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/HurlStack.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/ImageLoader.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/ImageRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/JsonArrayRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/JsonObjectRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/JsonRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/NetworkImageView.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/NoCache.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/PoolingByteArrayOutputStream.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/RequestFuture.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/StringRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/toolbox/Volley.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/wrapper/Entity.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/wrapper/IParseResponse.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/wrapper/VolleyEncapsulation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/wrapper/VolleyJsonObjectRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/wrapper/VolleyRequest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/wrapper/VolleyRequestManager.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/wrapper/VolleySocketEncapsulation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeLibrary/src/com/open/volley/wrapper/VolleyUtil.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AykeProject.iml" afterPath="$PROJECT_DIR$/AykeProject.iml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -230,21 +44,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="96">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_capture.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_capture.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AykeDemo/res/layout/activity_capture.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+            <state relative-caret-position="336">
+              <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -395,16 +209,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FastScroller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/android-sdk/sources/android-27/android/widget/FastScroller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="968" column="58" lean-forward="false" selection-start-line="968" selection-start-column="58" selection-end-line="968" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IBaseAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/abstracts/IBaseAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -522,16 +326,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SectionIndexer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/android-sdk/sources/android-27/android/widget/SectionIndexer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SectionItem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AykeLibrary/src/com/ayke/library/listview/pinnedsection/SectionItem.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -560,26 +354,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="444">
               <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/android-sdk/sources/android-27/android/view/View.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="21841" column="13" lean-forward="false" selection-start-line="21841" selection-start-column="13" selection-end-line="21841" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/android-sdk/sources/android-25/android/widget/SimpleAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="86" column="11" lean-forward="false" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -4141,6 +3915,24 @@
             </path>
             <path>
               <item name="AykeProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AykeProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="AykeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="AykeProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AykeProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="AykeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AykeProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AykeProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="AykeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AykeProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -4326,6 +4118,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -4345,7 +4138,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4544,17 +4337,6 @@ largestSize = new Point(largestPreview.width, largestPreview.height);</expressio
           <caret line="1265" column="16" lean-forward="false" selection-start-line="1265" selection-start-column="16" selection-end-line="1265" selection-end-column="16" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AykeDemo/res/layout/activity_capture.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Library/android-sdk/sources/android-27/android/widget/BaseAdapter.java">
@@ -4864,10 +4646,21 @@ largestSize = new Point(largestPreview.width, largestPreview.height);</expressio
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="96">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AykeDemo/res/layout/activity_capture.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>
