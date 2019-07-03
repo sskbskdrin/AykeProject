@@ -8,8 +8,7 @@ import com.ayke.library.abstracts.IBaseAdapter;
 
 import java.util.List;
 
-public abstract class BaseTreeAdapter<T extends BaseTreeNode> extends IBaseAdapter<T> implements
-        OnClickListener {
+public abstract class BaseTreeAdapter<T extends BaseTreeNode> extends IBaseAdapter<T> implements OnClickListener {
     private static final int KEY = Integer.MAX_VALUE / 2;
     protected static final int TYPE_LIMB = 0;
     protected static final int TYPE_LEAF = 1;
@@ -51,12 +50,15 @@ public abstract class BaseTreeAdapter<T extends BaseTreeNode> extends IBaseAdapt
 
     private int expand(T node, int position) {
         int count = 0;
-        for (int i = 0; i < node.getChildList().size(); i++) {
-            T item = (T) node.getChildList().get(i);
-            mList.add(position + i + 1, item);
-            count++;
-            if (item.isExpand()) {
-                position += expand(item, position + i + 1);
+        List<T> list = node.getChildList();
+        if (list != null) {
+            for (int i = 0; i < list.size(); i++) {
+                T item = list.get(i);
+                mList.add(position + i + 1, item);
+                count++;
+                if (item.isExpand()) {
+                    position += expand(item, position + i + 1);
+                }
             }
         }
         return count;

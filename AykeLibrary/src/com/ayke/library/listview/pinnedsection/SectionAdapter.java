@@ -20,10 +20,12 @@ public abstract class SectionAdapter<T extends SectionItem> extends IBaseAdapter
 
     protected SectionAdapter(Context context, List<T> list) {
         super(context, list);
+        setList();
     }
 
     protected SectionAdapter(Context context, List<T> list, int layoutId) {
         super(context, list, layoutId);
+        setList();
     }
 
     private void setList() {

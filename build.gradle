@@ -2,7 +2,7 @@
 
 buildscript {
     repositories {
-        jcenter()
+        jcenter() {url = "http://jcenter.bintray.com"}
         google()
     }
     dependencies {
@@ -15,7 +15,7 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
+        jcenter() {url = "http://jcenter.bintray.com"}
         google()
     }
 }
